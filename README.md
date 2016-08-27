@@ -69,3 +69,12 @@ FIXME
 TODO  
 
 Editor->Add build phase->Add run script
+
+######22 NSException vs NSError
+NSException: Can not be caught by swift  
+NSError: Can be caught by swift
+######23 Predefined Exception types
+NSRangeException  
+NSInvlidArgumentException  
+NSInternalInconsistencyException  
+NSObjectInaccessibleException //trying to access another object on a diff thread without permission
