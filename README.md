@@ -36,7 +36,7 @@ type summary add UITableViewCell -s "${var%@}"
 down bottom eye icon: quick look  
 
 18:36 extend UITableViewCell,custimize quicklook message
-UITableViewCellExt.swift
+Extensions/UITableViewCellExt.swift
 ```
 import Foundataion
 import UIKit
@@ -47,3 +47,25 @@ extension UITableViewCell{
   }
 }
 ```
+######10 The view debugger
+2:28
+select a view, right click: Focus on UIView
+
+######16 Tabs and behavior
+00:51
+cmd+t  enable tab
+03:20  
+preferences->behaviors->ruuning section->starts->show tab named (debug) in active window
+######17 code commenting
+MARK mark a section of methods  
+format  
+```
+// MARK: - abc
+```
+FIXME 
+```
+// FIXME: 
+```
+TODO  
+
+Editor->Add build phase->Add run script
