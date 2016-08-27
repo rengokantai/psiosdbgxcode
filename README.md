@@ -78,3 +78,18 @@ NSRangeException
 NSInvlidArgumentException  
 NSInternalInconsistencyException  
 NSObjectInaccessibleException //trying to access another object on a diff thread without permission
+
+
+######24 signals
+SIGABRT (EXE_CRASH)  
+Abnormal termination  
+SIGSEGV (EXC_BAD_ACCESS)  
+Invalid emeory access. Address exists but you do not have access  
+SIGBUS (EXC_BAD_ACCESS)  
+Addess does not exist or access method is invalid  
+SIGFPE (EXC_ARITHMETIC)  
+Floating point exception  
+SIGILL (EXC_BAD_INSTRUCTION)
+Invalid Instruction.  
+SIGINT - interactive attention  
+SIGTERM - termination
