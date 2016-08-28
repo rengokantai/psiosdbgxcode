@@ -196,3 +196,6 @@ Action: Debugger command.
 po $rax
 bt  //backtrace
 ```
+
+######45 Instruments
+product->profile (cmd+i)->time profiler->search core data, drag to left side bar
