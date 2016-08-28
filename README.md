@@ -143,6 +143,20 @@ func seedDatabase(){
   let path = bundle.pathForResource("ke",ofType:"json")
   let data = NSData(contentOfFile:path!)
   let dateFor:NSDateFormatter =NSDateFormatter()
-  dateFor.dateFormat = "yyyy-MM-dd'T'
+  dateFor.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  do{
+    let json = try NSJSONSerialization.JSONObjectWithData(data!, optionsL .AlliwFragments)
+    if let items = json["items"] as ?[[String:AnyObject]]{
+      for item in items{
+        let ev: Event = NSEntityDescription.insertNewObjectForEntityForName("Event",inManagedObjectContext:managedObjectContext) as! Event
+        ev.item = item["item"] as? String ==nil?"" :item["item"] as? String
+        ev.timestamp = dataFor.dateFromString((item["timestamp"] as? String)!)==nil?NSDate():dataFor.dateFromString((item["timestamp"] as? String)!)
+        
+      }
+    }
+    try managedObjectContext.save()
+}catch{
+
+}
 }
 ```
