@@ -185,3 +185,14 @@ delete sqlite file
 #! /bin/sh
 find /Users/ke/Library/Developers/CoreSimulator/Devides/uuid/data/Containers/Data/Application -iname "App.sqlite" -exec rm -rf {}\;
 ```
+10:07  
+Acction: Shell command. wait until done.
+
+######37
+symbolic bp  
+click + symbol, add Exception bp.  
+Action: Debugger command.  
+```
+po $rax
+bt  //backtrace
+```
