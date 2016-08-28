@@ -160,3 +160,28 @@ func seedDatabase(){
 }
 }
 ```
+store code data store file
+```
+lazy var applicationDocumentDirectory:URL ={
+  let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+  return urls[urls.count-1]
+}()
+```
+
+managedobjectmodel
+```
+lazy var managedObjectModel:URL ={
+  let modeURL = NSBundle.mainBundle().URLForResource("ke",withExtension:"")!
+  return NSManagedObjectModel(contentsOfURL:modelURL)
+}()
+```
+04:40  
+debug fails, delete sqlite files in /CoreSimulator/Devices/uuid/data/Containers/Data/uuid/Documents.
+use [simpholders](simpholders.com)
+
+find -iname  # insensitive  
+delete sqlite file
+```
+#! /bin/sh
+find /Users/ke/Library/Developers/CoreSimulator/Devides/uuid/data/Containers/Data/Application -iname "App.sqlite" -exec rm -rf {}\;
+```
