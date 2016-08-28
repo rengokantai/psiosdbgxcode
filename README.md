@@ -93,3 +93,40 @@ SIGILL (EXC_BAD_INSTRUCTION)
 Invalid Instruction.  
 SIGINT - interactive attention  
 SIGTERM - termination
+
+######26 Handling errors
+propagate:
+```
+enum CusError: ErrorType{
+  case Empty
+  case TooShort(Int)
+}
+func manName(name: String) throws -> String{
+  guard name.characters.count>0 else{throw CusError.Empty}
+  guard name.character.count >2 else{
+    throw CusError.TooShort(name.characters.count)}
+  return String(name.characters.reverse())
+  }
+}
+```
+impl trycatch:
+```
+do{
+  try manName("")
+}catch CusError.Empty{
+}catch CusError.TooSHort(let count){
+}
+```
+using try?
+```
+let f = try? manName("")
+```
+
+handlers:
+```
+NSSetUncaughtExceptionHandler
+Signal handler  (needs Objective-c bridge)
+```
+######34 General breakpoints
+set bp: use  
+cmd+ \
