@@ -130,3 +130,19 @@ Signal handler  (needs Objective-c bridge)
 ######34 General breakpoints
 set bp: use  
 cmd+ \
+
+
+05:41  
+rightclick a breakpoint ( in bp view) , move breakpoint to
+
+######36 Conditional
+snippets
+```
+func seedDatabase(){
+  let bundle = NSBundle.mainBundle()
+  let path = bundle.pathForResource("ke",ofType:"json")
+  let data = NSData(contentOfFile:path!)
+  let dateFor:NSDateFormatter =NSDateFormatter()
+  dateFor.dateFormat = "yyyy-MM-dd'T'
+}
+```
